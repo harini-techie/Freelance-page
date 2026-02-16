@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harin S | Freelance</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f5f7;
+    color:#222;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.logo .free{
+    color:#000;
+}
+
+.logo .lance{
+    background:linear-gradient(45deg,#a855f7,#6366f1);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#555;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#a855f7;
+}
+
+/* HERO */
+.hero{
+    padding:80px 8%;
+    background:linear-gradient(to right,#f3e8ff,#e0e7ff);
+}
+
+.hero-text{
+    max-width:600px;
+}
+
+.hero-text h2{
+    font-size:20px;
+    margin-bottom:10px;
+    background:linear-gradient(45deg,#a855f7,#6366f1);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero-text h1{
+    font-size:65px;
+    font-weight:800;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    font-size:20px;
+    margin-bottom:20px;
+}
+
+.subtitle strong{
+    font-weight:700;
+}
+
+.subtitle .highlight{
+    background:linear-gradient(45deg,#a855f7,#6366f1);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    font-weight:600;
+}
+
+.hero-text p{
+    color:#555;
+    margin-bottom:24px;
+    line-height:1.6;
+}
+
+.download-btn{
+    padding:12px 25px;
+    background:linear-gradient(45deg,#a855f7,#6366f1);
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    text-decoration:none;
+    display:inline-block;
+    font-weight:500;
+}
+
+/* ABOUT */
+.about{
+    padding:80px 8%;
+    background:#fff;
+    text-align:center;
+}
+
+.about h2{
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.about span{
+    color:#a855f7;
+}
+
+.about p{
+    font-size:18px;
+    line-height:1.8;
+    color:#555;
+    max-width:800px;
+    margin:0 auto;
+}
+
+/* SERVICES */
+.services{
+    padding:80px 8%;
+    background:linear-gradient(135deg,#f3e8ff,#e0e7ff);
+    text-align:center;
+}
+
+.services h2{
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.services span{
+    color:#a855f7;
+}
+
+.service-container{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.service-card{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    width:300px;
+    transition:0.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+}
+
+.service-card h3{
+    margin-bottom:15px;
+    color:#a855f7;
+}
+
+.service-card p{
+    color:#555;
+    line-height:1.6;
+}
+
+/* WORK / PROJECTS */
+.work{
+    padding:80px 8%;
+    background:#fff;
+    text-align:center;
+}
+
+.work h2{
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.work span{
+    color:#a855f7;
+}
+
+.work-container{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.work-card{
+    background:#f3e8ff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    width:300px;
+    transition:0.3s;
+}
+
+.work-card:hover{
+    transform:translateY(-8px);
+}
+
+.work-card h3{
+    margin-bottom:15px;
+    background:linear-gradient(45deg,#a855f7,#6366f1);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.work-card p{
+    color:#555;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+
+.project-btn{
+    padding:10px 20px;
+    background:linear-gradient(45deg,#a855f7,#6366f1);
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:500;
+}
+
+.project-btn:hover{
+    opacity:0.9;
+}
+
+/* PROJECT DETAILS */
+.project-details{
+    padding:60px 8%;
+    background:#e0e7ff;
+    text-align:center;
+}
+
+.project-details h3{
+    font-size:28px;
+    margin-bottom:15px;
+    color:#6366f1;
+}
+
+.project-details p{
+    color:#333;
+    line-height:1.6;
+    max-width:800px;
+    margin:0 auto 30px;
+}
+
+.project-details img{
+    width:100%;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
+/* CONTACT SECTION */
+.contact{
+    padding:50px 8%;
+    background:#fff;
+    text-align:left; 
+}
+
+.contact h2{
+    font-size:28px;   /* Reduced */
+    margin-bottom:15px;
+}
+
+.contact p{
+    font-size:14px;   /* Reduced */
+    color:#555;
+    margin-bottom:20px;
+}
+
+/* Smaller Contact Buttons */
+.contact .download-btn{
+    padding:8px 18px;   /* Smaller button */
+    font-size:13px;     /* Smaller text */
+    border-radius:5px;
+}
+/* FOOTER */
+footer{
+    padding:20px 8%;
+    text-align:center;
+    background:#efefff;
+    color:#8f8e8e;
+    font-size:14px;
+}
+
+/* ================= MOBILE VIEW ONLY ================= */
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+    /* Show hamburger */
+    .menu-toggle{
+        display:block;
+    }
+
+    /* Hide normal horizontal menu */
+    nav{
+        position:absolute;
+        top:70px;
+        right:0;
+        background:#fff;
+        width:100%;
+        display:none;
+        box-shadow:0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    /* Show when active */
+    nav.active{
+        display:block;
+    }
+
+    /* Make menu vertical */
+    nav ul{
+        flex-direction:column;
+        text-align:center;
+        padding:20px 0;
+        gap:20px;
+    }
+
+    nav ul li{
+        padding:10px 0;
+    }
+
+    /* Adjust hero text size */
+    .hero-text h1{
+        font-size:40px;
+    }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <span class="free">Free</span><span class="lance">Lancer</span>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+     <nav id="nav-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About Me</a></li>
+            <li><a href="#services" onclick="closeMenu()">Services</a></li>
+            <li><a href="#work" onclick="closeMenu()">Work</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h2>Hello, I am</h2>
+        <h1>Harini S</h1>
+        <div class="subtitle">
+            <strong>MCA Student</strong> | 
+            <span class="highlight">Freelance Developer</span>
+        </div>
+        <p>
+            I am a freelance developer, I develop responsive web applications, 
+    perform data analysis, and build Machine Learning & Deep Learning projects.
+        </p>
+        <a href="https://wa.me/9442365880" target="_blank" class="download-btn">Contact Me</a>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>About <span>Me</span></h2>
+    <p>
+        I specialize in Web Development using PHP, MySQL, HTML, and CSS, 
+        creating responsive and user-friendly applications. 
+        I also work on Data Analysis using Python and Excel, 
+        and develop Deep Learning and Machine Learning projects 
+        for academic and real-world problem solving.  
+        I focus on delivering clean, scalable, and efficient solutions 
+        that meet client requirements with quality and professionalism.
+    </p>
+</section>
+
+<section class="services" id="services">
+    <h2>My <span>Services</span></h2>
+    <div class="service-container">
+        <div class="service-card">
+            <h3>Web Development</h3>
+            <p>Responsive and dynamic websites using PHP, MySQL, HTML, and CSS.</p>
+        </div>
+        <div class="service-card">
+            <h3>Data Analysis</h3>
+            <p>Data processing and visualization using Python and Excel.</p>
+        </div>
+        <div class="service-card">
+            <h3>Deep Learning</h3>
+            <p>Deep Learning & ML based academic and real-world projects.</p>
+        </div>
+    </div>
+</section>
+
+<section class="work" id="work">
+    <h2>My <span>Work</span></h2>
+    <div class="work-container">
+        <div class="work-card">
+            <h3>Student Feedback Portal</h3>
+            <p>Developed a PHP/MySQL system for students to submit and manage feedback.</p>
+            <a href="#project-details" class="project-btn" onclick="showDetails('feedback')">View Details</a>
+        </div>
+        <div class="work-card">
+            <h3>Deep Learning Project</h3>
+            <p>Built a Python-based deep learning model for workplace stress detection.</p>
+            <a href="#project-details" class="project-btn" onclick="showDetails('dl')">View Details</a>
+        </div>
+         <div class="work-card">
+            <h3>College Symposium Website</h3>
+            <p>Responsive website for college symposium event.</p>
+            <a href="#project-details" class="project-btn" onclick="showDetails('symposium')">View Details</a>
+        </div>
+    </div>
+</section>
+
+<section class="project-details" id="project-details">
+    <div id="feedback-detail" class="detail" style="display:none;">
+        <h3>Student Feedback Portal - Full Details</h3>
+        <p>
+            • Students can submit feedback for faculty.<br>
+            • Faculty can view evaluation reports.<br>
+            • Admin can generate reports, manage student/faculty lists, questions, and all evaluation settings.<br>
+            • Admin panel provides full control over classes, students, faculty, and feedback submissions.<br>
+            <strong>Skills Used:</strong> PHP/MySQL, JavaScript/jQuery, AJAX, HTML/CSS, Bootstrap.
+        </p>
+        
+    </div>
+    <div id="dl-detail" class="detail" style="display:none;">
+        <h3>Deep Learning Project - Full Details</h3>
+        <p>
+            • Built and compared four neural architectures: LSTM, DeepLSTM, GRU, and DeepGRU.<br>
+            • Evaluated models using MSE, MAE, RMSE, and R²; implemented early stopping to avoid overfitting.<br>
+            • DeepLSTM achieved the best performance, effectively modeling short and long-term stress patterns.<br>
+            <strong>Skills Used:</strong> Python, TensorFlow/Keras, Deep Learning, RNNs, Data Preprocessing, Model Evaluation.
+        </p>
+    </div>
+    <div id="symposium-detail" class="detail" style="display:none;">
+        <h3>College Symposium Website - Full Details</h3>
+        <p>
+            • Designed and developed a responsive website for the college symposium event.<br>
+            • Built event pages, schedules, registration forms, and contact forms.<br>
+            • Implemented interactive UI using Bootstrap and JavaScript.<br>
+            <strong>Skills Used:</strong> HTML, CSS, JavaScript, Bootstrap.
+        </p>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Get in <span>Touch</span></h2>
+    <p>Reach me via WhatsApp or Email for freelance projects and collaborations.</p>
+    <a href="https://wa.me/9442365880" target="_blank" class="download-btn" style="margin-right:10px;">WhatsApp Me</a>
+    <a href="mailto:harinihari1411@gmail.com?subject=Freelance%20Project" class="download-btn">Email Me</a>
+</section>
+
+<footer>
+    <p>© 2026 Harini S | Contact: <a href="mailto:harinihari1411@gmail.com" style="color:#b477ec; text-decoration:none;">harinihari1411@gmail.com</a></p>
+</footer>
+
+<script>
+function showDetails(project){
+    document.querySelectorAll('.detail').forEach(d => d.style.display = 'none');
+    if(project === 'feedback'){
+        document.getElementById('feedback-detail').style.display = 'block';
+    } else if(project === 'dl'){
+        document.getElementById('dl-detail').style.display = 'block';
+    } else if(project === 'symposium'){
+        document.getElementById('symposium-detail').style.display = 'block';
+    }
+    document.getElementById('project-details').scrollIntoView({behavior: "smooth"});
+}
+
+
+
+function toggleMenu(){
+    document.getElementById("nav-menu").classList.toggle("active");
+}
+
+function closeMenu(){
+    document.getElementById("nav-menu").classList.remove("active");
+}
+
+
+</script>
+
+</body>
+
+</html>
+
+
